@@ -1,0 +1,12 @@
+Source: ros-lyrical-rko-slam
+Section: misc
+Priority: optional
+Maintainer: "Meher Malladi" <rm.meher97@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), catch2 <!nocheck>, libeigen3-dev, libnanoflann-dev, libopencv-dev, libspdlog-dev, libyaml-cpp-dev, robin-map-dev, ros-lyrical-ament-cmake, ros-lyrical-builtin-interfaces, ros-lyrical-geometry-msgs, ros-lyrical-rclcpp, ros-lyrical-rclcpp-components, ros-lyrical-rko-lio (>= 0.4.2), ros-lyrical-rosbag2-storage, ros-lyrical-sensor-msgs, ros-lyrical-sophus, ros-lyrical-std-msgs, ros-lyrical-tf2, ros-lyrical-tf2-ros, ros-lyrical-visualization-msgs, ros-lyrical-ros-workspace
+Homepage: https://prbonn.github.io/rko_slam/
+Standards-Version: 3.9.2
+
+Package: ros-lyrical-rko-slam
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libeigen3-dev, libnanoflann-dev, libopencv-dev, libspdlog-dev, libyaml-cpp-dev, robin-map-dev, ros-lyrical-builtin-interfaces, ros-lyrical-geometry-msgs, ros-lyrical-rclcpp, ros-lyrical-rclcpp-components, ros-lyrical-rko-lio (>= 0.4.2), ros-lyrical-rosbag2-storage, ros-lyrical-sensor-msgs, ros-lyrical-sophus, ros-lyrical-std-msgs, ros-lyrical-tf2, ros-lyrical-tf2-ros, ros-lyrical-visualization-msgs, ros-lyrical-ros-workspace
+Description: ROS2 LiDAR-inertial SLAM and multi-session alignment
