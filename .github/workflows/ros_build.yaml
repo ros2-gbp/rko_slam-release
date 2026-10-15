@@ -1,0 +1,43 @@
+name: ROS Build
+on:
+  workflow_call:
+    inputs:
+      ros_distro:
+        required: true
+        type: string
+      container_image:
+        required: true
+        type: string
+jobs:
+  ros_build:
+    runs-on: ubuntu-latest
+    container:
+      image: ${{ inputs.container_image }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          path: src/rko_slam
+      - uses: actions/checkout@v7
+        with:
+          repository: PRBonn/rko_lio
+          path: src/rko_lio
+      - name: Install build tools
+        run: |
+          apt-get update
+          apt-get install -y build-essential cmake
+      - name: rosdep install
+        run: |
+          . /opt/ros/${{ inputs.ros_distro }}/setup.sh
+          rosdep init 2>/dev/null || true
+          rosdep update
+          rosdep install --from-paths src --ignore-src -r -y
+      - name: Build
+        run: |
+          . /opt/ros/${{ inputs.ros_distro }}/setup.sh
+          colcon build --packages-select rko_lio rko_slam --event-handlers console_direct+ \
+            --cmake-args -DCMAKE_BUILD_TYPE=Release -DRKO_SLAM_BUILD_TESTS=ON
+      - name: Test
+        run: |
+          . /opt/ros/${{ inputs.ros_distro }}/setup.sh
+          colcon test --packages-select rko_slam --event-handlers console_direct+ --return-code-on-test-failure
+          colcon test-result --verbose
