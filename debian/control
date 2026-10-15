@@ -1,0 +1,12 @@
+Source: ros-jazzy-rko-slam
+Section: misc
+Priority: optional
+Maintainer: "Meher Malladi" <rm.meher97@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), catch2 <!nocheck>, libeigen3-dev, libnanoflann-dev, libopencv-dev, libspdlog-dev, libyaml-cpp-dev, robin-map-dev, ros-jazzy-ament-cmake, ros-jazzy-builtin-interfaces, ros-jazzy-geometry-msgs, ros-jazzy-rclcpp, ros-jazzy-rclcpp-components, ros-jazzy-rko-lio (>= 0.4.2), ros-jazzy-rosbag2-storage, ros-jazzy-sensor-msgs, ros-jazzy-sophus, ros-jazzy-std-msgs, ros-jazzy-tf2, ros-jazzy-tf2-ros, ros-jazzy-visualization-msgs, ros-jazzy-ros-workspace
+Homepage: https://prbonn.github.io/rko_slam/
+Standards-Version: 3.9.2
+
+Package: ros-jazzy-rko-slam
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libeigen3-dev, libnanoflann-dev, libopencv-dev, libspdlog-dev, libyaml-cpp-dev, robin-map-dev, ros-jazzy-builtin-interfaces, ros-jazzy-geometry-msgs, ros-jazzy-rclcpp, ros-jazzy-rclcpp-components, ros-jazzy-rko-lio (>= 0.4.2), ros-jazzy-rosbag2-storage, ros-jazzy-sensor-msgs, ros-jazzy-sophus, ros-jazzy-std-msgs, ros-jazzy-tf2, ros-jazzy-tf2-ros, ros-jazzy-visualization-msgs, ros-jazzy-ros-workspace
+Description: ROS2 LiDAR-inertial SLAM and multi-session alignment
