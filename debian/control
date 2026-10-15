@@ -1,0 +1,12 @@
+Source: ros-kilted-rko-slam
+Section: misc
+Priority: optional
+Maintainer: "Meher Malladi" <rm.meher97@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), catch2 <!nocheck>, libeigen3-dev, libnanoflann-dev, libopencv-dev, libspdlog-dev, libyaml-cpp-dev, robin-map-dev, ros-kilted-ament-cmake, ros-kilted-builtin-interfaces, ros-kilted-geometry-msgs, ros-kilted-rclcpp, ros-kilted-rclcpp-components, ros-kilted-rko-lio (>= 0.4.2), ros-kilted-rosbag2-storage, ros-kilted-sensor-msgs, ros-kilted-sophus, ros-kilted-std-msgs, ros-kilted-tf2, ros-kilted-tf2-ros, ros-kilted-visualization-msgs, ros-kilted-ros-workspace
+Homepage: https://prbonn.github.io/rko_slam/
+Standards-Version: 3.9.2
+
+Package: ros-kilted-rko-slam
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libeigen3-dev, libnanoflann-dev, libopencv-dev, libspdlog-dev, libyaml-cpp-dev, robin-map-dev, ros-kilted-builtin-interfaces, ros-kilted-geometry-msgs, ros-kilted-rclcpp, ros-kilted-rclcpp-components, ros-kilted-rko-lio (>= 0.4.2), ros-kilted-rosbag2-storage, ros-kilted-sensor-msgs, ros-kilted-sophus, ros-kilted-std-msgs, ros-kilted-tf2, ros-kilted-tf2-ros, ros-kilted-visualization-msgs, ros-kilted-ros-workspace
+Description: ROS2 LiDAR-inertial SLAM and multi-session alignment
