@@ -1,0 +1,12 @@
+Source: ros-rolling-rko-slam
+Section: misc
+Priority: optional
+Maintainer: "Meher Malladi" <rm.meher97@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), catch2 <!nocheck>, libeigen3-dev, libnanoflann-dev, libopencv-dev, libspdlog-dev, libyaml-cpp-dev, robin-map-dev, ros-rolling-ament-cmake, ros-rolling-builtin-interfaces, ros-rolling-geometry-msgs, ros-rolling-rclcpp, ros-rolling-rclcpp-components, ros-rolling-rko-lio (>= 0.4.2), ros-rolling-rosbag2-storage, ros-rolling-sensor-msgs, ros-rolling-sophus, ros-rolling-std-msgs, ros-rolling-tf2, ros-rolling-tf2-ros, ros-rolling-visualization-msgs, ros-rolling-ros-workspace
+Homepage: https://prbonn.github.io/rko_slam/
+Standards-Version: 3.9.2
+
+Package: ros-rolling-rko-slam
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libeigen3-dev, libnanoflann-dev, libopencv-dev, libspdlog-dev, libyaml-cpp-dev, robin-map-dev, ros-rolling-builtin-interfaces, ros-rolling-geometry-msgs, ros-rolling-rclcpp, ros-rolling-rclcpp-components, ros-rolling-rko-lio (>= 0.4.2), ros-rolling-rosbag2-storage, ros-rolling-sensor-msgs, ros-rolling-sophus, ros-rolling-std-msgs, ros-rolling-tf2, ros-rolling-tf2-ros, ros-rolling-visualization-msgs, ros-rolling-ros-workspace
+Description: ROS2 LiDAR-inertial SLAM and multi-session alignment
